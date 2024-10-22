@@ -1,6 +1,10 @@
 image:
   file: .gitpod.Dockerfile
 
+additionalRepositories:
+  - url: https://github.com/ben-manes/caffeine
+    checkoutLocation: caffeine
+
 tasks:
   - init: |
       if [ "$GITPOD_HEADLESS" = "true" ]; then
