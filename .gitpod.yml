@@ -11,8 +11,20 @@ tasks:
         export TERM=dumb
       fi
 
-      ./gradlew build
+      (cd /workspace/caffeine/
+          ./gradlew build -x test
+      )
+
+      (cd /workspace/spring-petclinic-multirepo
+          ./gradlew build
+      )
+
 vscode:
   extensions:
     - vscjava.vscode-java-pack
     - redhat.vscode-xml
+
+jetbrains:
+  intellij:
+    prebuilds:
+      version: stable
