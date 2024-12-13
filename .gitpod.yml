@@ -1,8 +1,15 @@
 image:
   file: .gitpod.Dockerfile
 
+checkoutLocation: repositories
+
 tasks:
   - init: |
+      mv /workspace/repositories /workspace/tmp
+      mkdir /workspace/repositories
+      mv /workspace/tmp /workspace/repositories/spring-petclinic-dynamic-multirepo
+
+
       if [ "$GITPOD_HEADLESS" = "true" ]; then
         export TERM=dumb
       fi
