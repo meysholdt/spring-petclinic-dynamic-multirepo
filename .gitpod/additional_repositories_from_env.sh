@@ -9,6 +9,8 @@ if [ -z "$ADDITIONAL_REPOSITORIES" ]; then
     exit 0
 fi
 
+cd /workspace
+
 # Split the ADDITIONAL_REPOSITORIES variable by spaces and clone each repository
 for REPO_URL in $ADDITIONAL_REPOSITORIES; do
     echo "Cloning repository: $REPO_URL"
