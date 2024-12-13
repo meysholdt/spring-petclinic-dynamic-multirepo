@@ -7,7 +7,7 @@ tasks:
         export TERM=dumb
       fi
       ./add_additional_select_repositores.sh
-      ./gradlew build
+      ./gradlew build -x test
 
 vscode:
   extensions:
