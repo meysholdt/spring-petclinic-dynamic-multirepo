@@ -1,26 +1,12 @@
 image:
   file: .gitpod.Dockerfile
 
-workspaceLocation: "."
-checkoutLocation: "foobar"
-
-additionalRepositories:
-  - url: https://github.com/ben-manes/caffeine
-    checkoutLocation: caffeine
-
 tasks:
   - init: |
       if [ "$GITPOD_HEADLESS" = "true" ]; then
         export TERM=dumb
       fi
-
-      (cd /workspace/caffeine/
-          ./gradlew build -x test
-      )
-
-      (cd /workspace/spring-petclinic-multirepo
-          ./gradlew build
-      )
+      ./gradlew build
 
 vscode:
   extensions:
