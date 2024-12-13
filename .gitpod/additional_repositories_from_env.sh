@@ -47,6 +47,6 @@ mkdir -p /workspace
 
 # Clone the selected repositories into /workspace
 for repo in "${selected_repositories[@]}"; do
-  echo "Cloning $repo into /workspace/repositories..."
-  git clone "$repo" /workspace/repositories/$(basename "$repo")
+  echo "Cloning $repo into /workspace..."
+  git clone "$repo" /workspace/$(basename "$repo")
 done
