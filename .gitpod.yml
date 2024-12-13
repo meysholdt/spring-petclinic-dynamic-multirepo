@@ -8,6 +8,7 @@ tasks:
       mv /workspace/repositories /workspace/tmp
       mkdir /workspace/repositories
       mv /workspace/tmp /workspace/repositories/spring-petclinic-dynamic-multirepo
+      ln -s /workspace/repositories/spring-petclinic-dynamic-multirepo/.gitpod/.gitpod.yml /workspace/repositories/
 
       if [ "$GITPOD_HEADLESS" = "true" ]; then
         export TERM=dumb
