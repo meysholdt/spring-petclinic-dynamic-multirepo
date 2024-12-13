@@ -3,13 +3,16 @@ image:
 
 tasks:
   - init: |
+      # in prebuilds, we set TERM=dumb so Gradle will produce plain output.
       if [ "$GITPOD_HEADLESS" = "true" ]; then
         export TERM=dumb
       fi
-      
+
+      # import clone all git repositories from $ADDITIONAL_REPOSITORIES.
       .gitpod/additional_repositories_from_env.sh
 
-      gradle build -x test
+      # the build is expected to have a special settings.gradle that aggregates the additional repos.
+      ./gradlew build -x test
 
 vscode:
   extensions:
