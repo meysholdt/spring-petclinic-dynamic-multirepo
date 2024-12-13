@@ -1,4 +1,4 @@
-rootProject.name = 'spring-petclinic-multirepo'
+rootProject.name = 'spring-petclinic-dynamic-multirepo'
 
 // Adjust this if the workspace directory is located elsewhere.
 def workspaceDir = file('/workspace')

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/../pgjdbc" name="pgjdbc">
+                <projects>
+                  <project path="$PROJECT_DIR$/../pgjdbc" />
+                  <project path="$PROJECT_DIR$/../pgjdbc/benchmarks" />
+                  <project path="$PROJECT_DIR$/../pgjdbc/pgjdbc" />
+                  <project path="$PROJECT_DIR$/../pgjdbc/pgjdbc-osgi-test" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/../pgjdbc/build-logic" name="build-logic">
+                <projects>
+                  <project path="$PROJECT_DIR$/../pgjdbc/build-logic" />
+                  <project path="$PROJECT_DIR$/../pgjdbc/build-logic/basics" />
+                  <project path="$PROJECT_DIR$/../pgjdbc/build-logic/build-parameters" />
+                  <project path="$PROJECT_DIR$/../pgjdbc/build-logic/java-comment-preprocessor" />
+                  <project path="$PROJECT_DIR$/../pgjdbc/build-logic/jvm" />
+                  <project path="$PROJECT_DIR$/../pgjdbc/build-logic/publishing" />
+                  <project path="$PROJECT_DIR$/../pgjdbc/build-logic/root-build" />
+                  <project path="$PROJECT_DIR$/../pgjdbc/build-logic/verification" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/../pgjdbc/build-logic-commons" name="build-logic-commons">
+                <projects>
+                  <project path="$PROJECT_DIR$/../pgjdbc/build-logic-commons" />
+                  <project path="$PROJECT_DIR$/../pgjdbc/build-logic-commons/gradle-plugin" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../pgjdbc" />
+            <option value="$PROJECT_DIR$/../pgjdbc/benchmarks" />
+            <option value="$PROJECT_DIR$/../pgjdbc/build-logic" />
+            <option value="$PROJECT_DIR$/../pgjdbc/build-logic-commons" />
+            <option value="$PROJECT_DIR$/../pgjdbc/build-logic-commons/gradle-plugin" />
+            <option value="$PROJECT_DIR$/../pgjdbc/build-logic/basics" />
+            <option value="$PROJECT_DIR$/../pgjdbc/build-logic/build-parameters" />
+            <option value="$PROJECT_DIR$/../pgjdbc/build-logic/java-comment-preprocessor" />
+            <option value="$PROJECT_DIR$/../pgjdbc/build-logic/jvm" />
+            <option value="$PROJECT_DIR$/../pgjdbc/build-logic/publishing" />
+            <option value="$PROJECT_DIR$/../pgjdbc/build-logic/root-build" />
+            <option value="$PROJECT_DIR$/../pgjdbc/build-logic/verification" />
+            <option value="$PROJECT_DIR$/../pgjdbc/pgjdbc" />
+            <option value="$PROJECT_DIR$/../pgjdbc/pgjdbc-osgi-test" />
+            <option value="$PROJECT_DIR$" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
