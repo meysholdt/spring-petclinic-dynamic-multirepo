@@ -1,1 +1,7 @@
+
+// we want this build to aggregate al builds if we're the main repo in the Gitpod workspace.
+if (System.getenv("GITPOD_REPO_ROOT") == settingsDir.absolutePath) {
+  apply from: '.gitpod/aggregate-build.gradle'
+}
+
 rootProject.name = 'spring-petclinic-dynamic-multirepo'

@@ -1,0 +1,21 @@
+
+// Adjust this if the workspace directory is located elsewhere.
+def workspaceDir = file('/workspace')
+
+// Safety check: ensure the directory exists
+if (!workspaceDir.exists() || !workspaceDir.isDirectory()) {
+  throw new GradleException("The workspace directory at $workspaceDir is missing or not a directory.")
+}
+
+// The directory where this settings file resides
+def aggregatorDir = settingsDir.canonicalFile
+
+workspaceDir.eachDir { projectDir ->
+  // Check if this directory is a Gradle project by looking for a build script
+  boolean hasGradleScript = new File(projectDir, 'build.gradle').exists() ||
+                            new File(projectDir, 'build.gradle.kts').exists()
+
+  if (hasGradleScript && projectDir.canonicalFile != aggregatorDir) {
+    includeBuild(projectDir)
+  }
+}

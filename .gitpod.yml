@@ -1,21 +1,14 @@
 image:
   file: .gitpod.Dockerfile
 
-checkoutLocation: repositories
-
 tasks:
   - init: |
-      mv /workspace/repositories /workspace/tmp
-      mkdir /workspace/repositories
-      mv /workspace/tmp /workspace/repositories/spring-petclinic-dynamic-multirepo
-      ln -s /workspace/repositories/spring-petclinic-dynamic-multirepo/.gitpod/.gitpod.yml /workspace/repositories/
-
       if [ "$GITPOD_HEADLESS" = "true" ]; then
         export TERM=dumb
       fi
       
-      /workspace/repositories/spring-petclinic-dynamic-multirepo/.gitpod/add_additional_select_repositores.sh
-      ln -s /workspace/repositories/spring-petclinic-dynamic-multirepo/.gitpod/*.gradle /workspace/repositories/
+      .gitpod/additional_repositories_from_env.sh
+
       gradle build -x test
 
 vscode:
