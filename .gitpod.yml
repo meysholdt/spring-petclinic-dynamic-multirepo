@@ -6,6 +6,7 @@ tasks:
       if [ "$GITPOD_HEADLESS" = "true" ]; then
         export TERM=dumb
       fi
+      ./add_additional_select_repositores.sh
       ./gradlew build
 
 vscode:
