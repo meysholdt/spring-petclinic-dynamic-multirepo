@@ -9,12 +9,13 @@ tasks:
       mkdir /workspace/repositories
       mv /workspace/tmp /workspace/repositories/spring-petclinic-dynamic-multirepo
 
-
       if [ "$GITPOD_HEADLESS" = "true" ]; then
         export TERM=dumb
       fi
-      ./add_additional_select_repositores.sh
-      ./gradlew build -x test
+      
+      ./.gitpod/add_additional_select_repositores.sh
+      cp .gitpod/build.gradle /workspace/repositories/
+      gradle build -x test
 
 vscode:
   extensions:
