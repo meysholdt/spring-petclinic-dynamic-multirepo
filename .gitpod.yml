@@ -14,7 +14,7 @@ tasks:
       fi
       
       /workspace/repositories/spring-petclinic-dynamic-multirepo/.gitpod/add_additional_select_repositores.sh
-      cp /workspace/repositories/spring-petclinic-dynamic-multirepo/.gitpod/*.gradle /workspace/repositories/
+      ln -s /workspace/repositories/spring-petclinic-dynamic-multirepo/.gitpod/*.gradle /workspace/repositories/
       gradle build -x test
 
 vscode:
